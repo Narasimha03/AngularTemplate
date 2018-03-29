@@ -1,0 +1,1 @@
+var myApp = angular.module("sample", ['ngDialog', 'ui.router','smart-table','xeditable'])
