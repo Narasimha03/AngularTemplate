@@ -16,7 +16,8 @@ myApp.controller("sampleController", ['$scope', '$http', 'ngDialog', 'sampleServ
                         name: element.name,
                         near: element.near,
                         street: element.street,
-                        city: element.City
+                        city: element.City,
+                        gender:element.gender
 
                     }
                     $scope.sample_details.push(obj);
@@ -36,9 +37,10 @@ myApp.controller("sampleController", ['$scope', '$http', 'ngDialog', 'sampleServ
             city: $scope.value.city,
             near: $scope.value.near,
             street: $scope.value.street,
+            gender:$scope.value.gender
 
         }
-        // console.log(sampleData);
+         console.log(sampleData);
 
         sampleService.setSample(sampleData)
             .then(function (data, status) {
